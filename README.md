@@ -18,3 +18,4 @@ sending each packet, the application waits up to one second to receive a reply. 
 without a reply from the server, then the client assumes that either the ping packet or the pong packet
 was lost in the network (or that the server is down).   
 </p>
+<h3>Credit by <em>https://files.transtutors.com/cdn/uploadassignments/429178_1_socket5-icmppinger.pdf</em> </h3>
