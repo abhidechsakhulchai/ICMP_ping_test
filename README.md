@@ -24,11 +24,11 @@ was lost in the network (or that the server is down).
 ICMP Header
 The ICMP header starts after bit 160 of the IP header (unless IP options are used).
 <ul>
-  <ol>Type : ICMP type. </ol>
-  <ol>Code : Subtype to the given ICMP type.</ol>
-  <ol>Checksum : Error checking data calculated from the ICMP header + data, with value 0 for this field.</ol>
-  <ol>ID - An ID value, should be returned in the case of echo reply.</ol>
-  <ol>Sequence - A sequence value, should be returned in the case of echo reply.</ol>
+  <li>Type : ICMP type. </li>
+  <li>Code : Subtype to the given ICMP type.</li>
+  <li>Checksum : Error checking data calculated from the ICMP header + data, with value 0 for this field.</li>
+  <li>ID - An ID value, should be returned in the case of echo reply.</li>
+  <li>Sequence - A sequence value, should be returned in the case of echo reply.</li>
   </ul>
 # Echo Request
 The echo request is an ICMP message whose data is expected to be received back in an echo reply ("pong"). The host must respond to all echo requests with an echo reply containing the exact data received in the request message.
