@@ -30,6 +30,7 @@ The ICMP header starts after bit 160 of the IP header (unless IP options are use
   <li>ID - An ID value, should be returned in the case of echo reply.</li>
   <li>Sequence - A sequence value, should be returned in the case of echo reply.</li>
 </ul>
+
 # Echo Request
 The echo request is an ICMP message whose data is expected to be received back in an echo reply ("pong"). The host must respond to all echo requests with an echo reply containing the exact data received in the request message.
 <ul>
@@ -38,6 +39,7 @@ The echo request is an ICMP message whose data is expected to be received back i
   <li>The Identifier and Sequence Number can be used by the client to match the reply with the request that caused the reply. In practice, most Linux systems use a unique identifier for every ping process, and sequence number is an increasing number within that process. Windows uses a fixed identifier, which varies between Windows versions, and a sequence number that is only reset at boot time.</li>
   <li>The data received by the echo request must be entirely included in the echo reply.</li>
 </ul>
+
 # Echo Reply
 The echo reply is an ICMP message generated in response to an echo request, and is mandatory for all hosts and routers.
 <ul>
