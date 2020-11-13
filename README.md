@@ -29,17 +29,20 @@ The ICMP header starts after bit 160 of the IP header (unless IP options are use
   <li>Checksum : Error checking data calculated from the ICMP header + data, with value 0 for this field.</li>
   <li>ID - An ID value, should be returned in the case of echo reply.</li>
   <li>Sequence - A sequence value, should be returned in the case of echo reply.</li>
-  </ul>
+</ul>
 # Echo Request
 The echo request is an ICMP message whose data is expected to be received back in an echo reply ("pong"). The host must respond to all echo requests with an echo reply containing the exact data received in the request message.
-
-Type must be set to 8.
-Code must be set to 0.
-The Identifier and Sequence Number can be used by the client to match the reply with the request that caused the reply. In practice, most Linux systems use a unique identifier for every ping process, and sequence number is an increasing number within that process. Windows uses a fixed identifier, which varies between Windows versions, and a sequence number that is only reset at boot time.
-The data received by the echo request must be entirely included in the echo reply.
+<ul>
+  <li>Type must be set to 8.</li>
+  <li>Code must be set to 0.</li>
+  <li>The Identifier and Sequence Number can be used by the client to match the reply with the request that caused the reply. In practice, most Linux systems use a unique identifier for every ping process, and sequence number is an increasing number within that process. Windows uses a fixed identifier, which varies between Windows versions, and a sequence number that is only reset at boot time.</li>
+  <li>The data received by the echo request must be entirely included in the echo reply.</li>
+</ul>
 # Echo Reply
 The echo reply is an ICMP message generated in response to an echo request, and is mandatory for all hosts and routers.
+<ul>
+  <li>Type and code must be set to 0.</li>
+  <li>The identifier and sequence number can be used by the client to determine which echo requests are associated with the echo replies.</li>
+  <li>The data received in the echo request must be entirely included in the echo reply.</li>
+</ul>
 
-Type and code must be set to 0.
-The identifier and sequence number can be used by the client to determine which echo requests are associated with the echo replies.
-The data received in the echo request must be entirely inc
